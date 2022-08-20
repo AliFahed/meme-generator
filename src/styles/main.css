@@ -1,0 +1,45 @@
+:root {
+  --primary-theme-color: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  --primary-text-color: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--primary-text-color);
+}
+
+/*========== Header ==========*/
+.header {
+  background: var(--primary-theme-color);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.troll-face-icon {
+  width: 50px;
+}
+
+.header-title {
+  font-size: 2.1rem;
+}
+
+.header-text {
+  font-size: 1.3rem;
+}
