@@ -24,6 +24,16 @@ function Meme() {
     memeImageContainer.classList.add('display-meme-image');
   }
 
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      [name]: value,
+    }));
+  }
+
+  console.log(meme);
+
   return (
     <main className="main-content">
       {/* <form action="#" className="form"> */}
@@ -31,14 +41,20 @@ function Meme() {
         <input
           type="text"
           placeholder="Top Text"
-          name="meme-top-text"
+          name="topText"
+          value={meme.topText}
+          onChange={handleChange}
           className="input"
+          maxLength={40}
         />
         <input
           type="text"
           placeholder="Bottom Text"
-          name="meme-bottom-text"
+          name="bottomText"
+          value={meme.bottomText}
+          onChange={handleChange}
           className="input"
+          maxLength={40}
         />
       </div>
       <div className="search-meme-container">
@@ -49,6 +65,10 @@ function Meme() {
       {/* </form> */}
 
       <div className="meme-image-container">
+        <div className="texts-container">
+          <p className="top-text">{meme.topText}</p>
+          <p className="bottom-text">{meme.bottomText}</p>
+        </div>
         <img
           src={meme.randomImage}
           alt="Random Meme Image"

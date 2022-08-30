@@ -101,6 +101,7 @@ body {
   cursor: pointer;
 }
 
+/*========== Meme image container ==========*/
 .meme-image-container {
   margin: 12px;
   margin-top: 40px;
@@ -115,4 +116,24 @@ body {
 
 .display-meme-image {
   display: block;
+}
+
+/*========== Texts container ==========*/
+.texts-container {
+  /* background: lightblue; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.top-text,
+.bottom-text {
+  color: #000;
+  position: absolute;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.bottom-text {
+  margin-top: 310px;
 }
